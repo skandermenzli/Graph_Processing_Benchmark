@@ -1,0 +1,9 @@
+OS,machine_cpu,machine_ram
+ubuntu ,4,32
+ubuntu ,6,32
+ubuntu ,4,16
+ubuntu ,6,16
+ubuntu ,4,8
+windows,4,32
+windows,4,8
+windows,6,16
