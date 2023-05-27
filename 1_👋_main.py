@@ -26,8 +26,8 @@ st.markdown("<span style='font-size:20px;'>This was developped as part of our En
 
 st.markdown("""
 <ul style='font-size: 18px; font-weight:bold;'>
-  <li> Skander Menzli</li>
-  <li> ☯ Mohamed Farouk Drira</li>
+  <li> 🤷‍♂️Skander Menzli</li>
+  <li> 🧮 Mohamed Farouk Drira</li>
   <li>👑 Racem Benrhayem</li>
   <li>💈 Mohamed Bouarda</li>
 </ul>

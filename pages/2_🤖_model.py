@@ -26,7 +26,7 @@ with col1:
         ram = st.text_input("Available ram:")
         size = st.text_input("Graph size:")
         nbr_nodes = st.text_input("Number of nodes:")
-        if st.button('Say hello'):
+        if st.button('Submit'):
             test_data = pd.DataFrame({
                 # 'OS':[os_name],
                 # 'disk': [disk_gb],
