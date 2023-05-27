@@ -1,3 +1,4 @@
+import sklearn
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
 import pandas as pd
