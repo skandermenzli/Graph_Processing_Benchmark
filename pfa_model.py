@@ -35,7 +35,7 @@ class PfaModel:
         train_machines['key'] = 0
         train_data = train_machines.merge(train_graphs, on='key', how='outer')
         self.res = train_data[['Graph_name', 'machine_cpu', 'machine_ram']]
-        print(train_data)
+        #print(train_data)
         train_data = train_data.drop(['key', 'Graph_name', 'machine_cpu', 'machine_ram'], axis=1)
 
         # print(names)
@@ -59,42 +59,40 @@ class PfaModel:
         print("indice", indices)
         print(self.res.iloc[[indices[0, 0]]])
         config = self.res.iloc[[indices[0, 0]]]
-        # return row
-        # print(type(row))
 
-        graphchi = pd.read_csv('csv/GraphChi.csv')
-        mmap = pd.read_csv('csv/Mmap.csv')
-        tools = [mmap, graphchi]
+        graphchi = pd.read_csv('csv/PFA-GraphChi.csv')
+        mmap = pd.read_csv('csv/PFA-MMAP.csv')
+        ligra = pd.read_csv('csv/PFA-ligra.csv')
+        tools = [mmap, graphchi, ligra]
         names = ['mmap', 'graphchi', 'ligra']
         scores = list()
-        print("aaaaaaaaaa")
+        min_names = list()
+        i = 0
+        print(config.iloc[0, 1])
+        print(config.iloc[0, 2])
+        print(config.iloc[0, 0])
         for tool in tools:
+            test = tool[
+                        (tool['Graph_name'] == config.iloc[0, 0])&(tool['Algorithm'] == algo)]
+            print(test)
             line = tool[(tool['machine_cpu'] == config.iloc[0, 1]) &
                         (tool['machine_ram'] == config.iloc[0, 2]) &
                         (tool['Graph_name'] == config.iloc[0, 0]) &
                         (tool['Algorithm'] == algo)]
+            print('line',line)
             if line.empty:
+                i = i + 1
                 continue
+
+            min_names.append(names[i])
+            i = i + 1
             score = float(line.iloc[0]['exec_time(s)']) * self.time_weight + float(
                 line.iloc[0]['peak_memory']) * self.ram_weight
             scores.append(score)
 
         print("scores:", scores)
 
-        """ chi = graphchi[(graphchi['machine_cpu']==config.iloc[0,1])&
-                     (graphchi['machine_ram']==config.iloc[0,2])&
-                     (graphchi['Graph_name']==config.iloc[0,0])&
-                     (graphchi['Algorithm']=='PR10')]
-        mm = mmap[(mmap['machine_cpu']==config.iloc[0,1])&
-                     (mmap['machine_ram']==config.iloc[0,2])&
-                     (mmap['Graph_name']==config.iloc[0,0])&
-                     (mmap['Algorithm']=='PR10')]
-
-        mm_score = float(mm.iloc[0]['exec_time(s)'])*self.time_weight + mm.iloc[0]['peak_memory']*self.ram_weight
-        print("mmap score:",mm_score)
-        chi_score = chi.iloc[0]['exec_time(s)']*self.time_weight + chi.iloc[0]['peak_memory']*self.ram_weight
-        print("chi_socre:",chi_score)"""
-
         min_value = min(scores)
         min_index = scores.index(min_value)
-        return names[min_index],config
+        print(min_names)
+        return min_names[min_index],config

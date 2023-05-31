@@ -1,4 +1,8 @@
+import flask
 import streamlit as st
+from flask import Flask, request
+import pandas as pd
+from pfa_model import PfaModel
 
 
 st.title('Benchmark For Graph processing tools on a single machine')
@@ -43,7 +47,29 @@ st.markdown("""
 </ul>
 """, unsafe_allow_html=True)
 
+app = Flask(__name__)
+@app.route("/predict",methods=['POST'])
+def hello_world():
+    test_data = pd.DataFrame({
+        # 'OS':[os_name],
+        # 'disk': [disk_gb],
+        'cpu': [float(request.form['cpu'])],
+        'ram': [float(request.form['ram'])],
+        'Graph_size(MB)': [float(request.form['graph_size'])],
+        'Graph_nodes(vertices)': [int(request.form['graph_nodes'])],
+        'Graph_edges': [int(request.form['graph_edges'])]
+    })
+    algo = request.form['algo']
+    machines = pd.read_csv("csv/machines.csv")
+    graphs = pd.read_csv("csv/graphs.csv")
+    print("flassssssssssssk:", flask.__version__)
+    model = PfaModel(0.99,0.01)
+    model.train(graphs, machines)
+    #print("tessssssst",test_data)
 
+    name, config = model.predict(test_data, algo)
+    return name
+    #return "<p>Hello, World!</p>"
 
 
 
