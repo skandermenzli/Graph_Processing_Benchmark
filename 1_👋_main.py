@@ -80,13 +80,13 @@ def hello_world():
     print(algo)
     machines = pd.read_csv("csv/machines.csv")
     graphs = pd.read_csv("csv/graphs.csv")
-    print("flassssssssssssk:", flask.__version__)
+   # print("flassssssssssssk:", flask.__version__)
     model = PfaModel(0.99,0.01)
     model.train(graphs, machines)
     #print("tessssssst",test_data)
 
-    name, config = model.predict(test_data, algo)
-    return name
+    name, expected_time = model.predict(test_data, algo)
+    return {'name':name, 'expected_time':expected_time}
     #return "<p>Hello, World!</p>"
 
 
