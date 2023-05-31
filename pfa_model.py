@@ -54,7 +54,7 @@ class PfaModel:
             x[col] = scaler.transform(x[col].values.reshape(-1, 1))
         print(x)
         distances, indices = self.knn.kneighbors(x)
-        print("predict")
+        #print("predict")
         print("distance: ", distances)
         print("indice", indices)
         print(self.res.iloc[[indices[0, 0]]])
@@ -67,6 +67,7 @@ class PfaModel:
         names = ['mmap', 'graphchi', 'ligra']
         scores = list()
         min_names = list()
+        min_times = list()
         i = 0
         print(config.iloc[0, 1])
         print(config.iloc[0, 2])
@@ -85,14 +86,20 @@ class PfaModel:
                 continue
 
             min_names.append(names[i])
+            min_times.append(float(line.iloc[0]['exec_time(s)']))
             i = i + 1
+
+
             score = float(line.iloc[0]['exec_time(s)']) * self.time_weight + float(
                 line.iloc[0]['peak_memory']) * self.ram_weight
             scores.append(score)
+
 
         print("scores:", scores)
 
         min_value = min(scores)
         min_index = scores.index(min_value)
         print(min_names)
-        return min_names[min_index],config
+        #return min_names[min_index],config
+
+        return min_names[min_index], min_times[min_index]
