@@ -71,8 +71,13 @@ def hello_world():
     })
     print(test_data)
     algo = request.json['algo']
+    iter = request.json['iterations']
+    print("algo *****************"+algo)
     if(algo=="PAGE_RANK"):
-        algo="PR"+request.json['iterations']
+        print(algo)
+        print(iter)
+        algo="PR"+str(iter)
+        print(algo)
     elif(algo=="CONNECTED_COMPONENTS"):
         algo="CC"
     else: 
