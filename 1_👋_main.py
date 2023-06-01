@@ -67,7 +67,7 @@ def hello_world():
     model.train(graphs, machines)
     #print("tessssssst",test_data)
 
-    name, expected_time = model.predict(test_data, algo)
+    name, expected_time,config = model.predict(test_data, algo)
     return {'name':name, 'expected_time':expected_time}
     #return "<p>Hello, World!</p>"
 

@@ -85,9 +85,11 @@ class PfaModel:
                 i = i + 1
                 continue
 
+
             min_names.append(names[i])
             min_times.append(float(line.iloc[0]['exec_time(s)']))
             i = i + 1
+
 
 
             score = float(line.iloc[0]['exec_time(s)']) * self.time_weight + float(
@@ -102,4 +104,4 @@ class PfaModel:
         print(min_names)
         #return min_names[min_index],config
 
-        return min_names[min_index], min_times[min_index]
+        return min_names[min_index], min_times[min_index],config

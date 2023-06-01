@@ -25,7 +25,7 @@ with col2:
 
 with col1:
         ram = st.text_input("Available ram:")
-        size = st.text_input("Graph size:")
+        size = st.text_input("Graph size(GB):")
         nbr_nodes = st.text_input("Number of nodes:")
         if st.button('Submit'):
             test_data = pd.DataFrame({
@@ -39,10 +39,14 @@ with col1:
             })
 
             #st.write(test_data)
-            name,config = model.predict(test_data,algo)
-            st.write("Benchamrk run on this config:")
-            st.write(config)
-            st.write("the best tool is:",name)
+            name,time,config = model.predict(test_data,algo)
+
+            st.write("The model compared frameworks performances on the following configuration configuration")
+            st.dataframe(config)
+
+            st.write("The best framework for your case is: <b>" + name + "</b>", unsafe_allow_html=True)
+
+            st.write("with estimated time in seconds of :",time)
 
 
 
