@@ -1,7 +1,7 @@
 Graph_name,Graph_type,Graph_size(MB),Graph_nodes(vertices),Graph_edges
 web-google,web,0.0670552,875713,5105039
 soc-journal,social,1.1,4847571,68993773
-twitter-2010.txt,social network,26.1,41652230,1468364884
+twitter-2010.txt.bin,social network,26.1,41652230,1468364884
 com-orkut,ground truth,1.7,3072441,117185083
 socf-konect.edges,Social Network,1.6,59200000,92522017
 soc-sinawbeio-260M_edge,Social Network,4,21000000,261321071

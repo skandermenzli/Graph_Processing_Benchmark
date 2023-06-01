@@ -1,24 +1,24 @@
 OS,machine_cpu,machine_ram,Graph_name,Graph_type,Graph_size(MB),Graph_nodes(vertices),Graph_edges,Algorithm,exec_time(s),peak_memory,mean_memory,mean_cpu,Disk_read,Disk_write
-ubuntu,4,32,soc-journal,social network,,,,PR10,125,3083208 kB,,,,
-ubuntu,4,32,soc-journal,social network,,,,TC,11.6,3083220 kB,,,,
-ubuntu,4,32,web-Google,web-graph,,,,PageRank,13.7,253340 kB,,,,
-ubuntu,6,24,web-Google,web-graph,,,,BFS, 0.0935,227788kb,,,,
-ubuntu,6,24,web-Google,web-graph,,,,PageRank,6.9,227688kb,,,,
-ubuntu,4,32,web-Google,web-graph,,,,BFS,0.115,227780kB,,,,
+ubuntu,4,32,soc-journal,social network,,,,PR10,125,3083208,,,,
+ubuntu,4,32,soc-journal,social network,,,,TC,11.6,3083220,,,,
+ubuntu,4,32,web-Google,web-graph,,,,PageRank,13.7,253340,,,,
+ubuntu,6,24,web-Google,web-graph,,,,BFS, 0.0935,227788,,,,
+ubuntu,6,24,web-Google,web-graph,,,,PageRank,6.9,227688,,,,
+ubuntu,4,32,web-Google,web-graph,,,,BFS,0.115,227780,,,,
 ubuntu,6,24,web-Google,web-graph,,,,PageRankDelta,1.31,227824,,,,
-ubuntu,4,32,soc-journal,social network,,,,convertion,18.53,4274152 kB,,99%,2040,1070992
-ubuntu,4,32,soc-journal,social network,,,,BFS,0.406,2868908 kB,,99%,0,0
-ubuntu,4,32,soc-journal,social network,,,,CC,1.25,2868884kB,,99%,0,0
-ubuntu,4,32,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,CC,1.24,4795284kB,,99%,0,0
-ubuntu,4,32,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,PR10,25.2,4795296kB,,99%,0,0
-ubuntu,4,32,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,BFS,0.00067,4795276kB,,,,
-ubuntu,4,32,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,TC,0.805,4795404kB,,,,
+ubuntu,4,32,soc-journal,social network,,,,convertion,18.53,4274152,,99%,2040,1070992
+ubuntu,6,16,soc-journal,social network,,,,BFS,0.406,2868908,,99%,0,0
+ubuntu,4,32,soc-journal,social network,,,,CC,1.25,2868884,,99%,0,0
+ubuntu,4,32,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,CC,1.24,4795284,,99%,0,0
+ubuntu,4,32,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,PR10,25.2,4795296,,99%,0,0
+ubuntu,4,32,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,BFS,0.00067,4795276,,,,
+ubuntu,4,32,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,TC,0.805,4795404,,,,
 ubuntu,6,24,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,BFS,0.00153,4795248,,99%,0,0
-ubuntu ,6,24,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,PageRank,49.8,4795312kb,,99%,0,0
-ubuntu,6,24,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,TC,0.643,4795256kb,,99%,,
+ubuntu ,6,24,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,PageRank,49.8,4795312,,99%,0,0
+ubuntu,6,24,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,TC,0.643,4795256,,99%,,
 ubuntu,6,24,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,PageRankDelta,13.2,4795196,,99%,,
 ubuntu,6,24,com-orkut,ground truth,1.7G(el) 892M(l),3072441,117185083,BC,0.0302,1198062,,99%,,
-ubuntu,6,24,soc-journal,social network,1.1G,4847571,68993773,BFS,0.329,2868804,,99%,,
+ubuntu,6,16,soc-journal,social network,1.1G,4847571,68993773,BFS,0.329,2868804,,99%,,
 ubuntu,6,24,soc-journal,social network,1.1G,4847571,68993773,PageRank,5:49.02/    2.65,2868636,,99%,,
 ubuntu,6,24,soc-journal,social network,1.1G,4847571,68993773,BC,1.68,2868692,,99%,,
 ubuntu,6,24,soc-journal,social network,1.1G,4847571,68993773,TC,10.4,2868792,,99%,,

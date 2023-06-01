@@ -16,14 +16,14 @@ ubuntu,4,32,twitter-2010.txt.bin,social network,11.7GB,41652230,1468364884,PageR
 ubuntu,4,32,twitter-2010.txt.bin,social network,11.7GB,41652230,1468364884,PageRank_50,0.143,53044,-,240%,,
 ubuntu,4,32,twitter-2010.txt.bin,social network,11.7GB,41652230,1468364884,PageRank_10,0.1,45424,-,171%,,
 ubuntu,4,32,twitter-2010.txt.bin,social network,11.7GB,41652230,1468364884,Connected_Commponent,19.64,11669532,3830.1,60%,,
-ubuntu,4,16,twitter-2010.txt,social network,26.1GB,41652230,1468364884,transform_txt_bin,870.299,4810400,,36%,30894224,22945280
-ubuntu,4,16,twitter-2010.txt.bin,social network,11.7GB,41652230,1468364884,PageRank_20,0.103,49664,-,160%,,
-ubutnu,4,16,twitter-2010.txt.bin,social network,11.7GB,41652230,1468364884,PageRank_50,0.125,54580,-,226%,,
-ubutnu,4,16,twitter-2010.txt.bin,social network,11.7GB,41652230,1468364884,PageRank_10,0.1,46432,-,194%,,
-ubutnu,4,16,twitter-2010.txt.bin,social network,11.7GB,41652230,1468364884,Connected_Commponent,19.97,11669032,,97%,,
-ubutnu,4,8,twitter-2010.txt,social network,26.1GB,41652230,1468364884,transform_txt_bin,,,,,,
-ubutnu,4,8,twitter-2010.txt.bin,social network,11.7GB,41652230,1468364884,PageRank_20,0.105,47188,,208%,,
-ubutnu,4,8,twitter-2010.txt.bin,social network,11.7GB,41652230,41652230,PageRank_50,0.123,54396,,236%,,
+ubuntu,6,16,twitter-2010.txt,social network,26.1GB,41652230,1468364884,transform_txt_bin,870.299,4810400,,36%,30894224,22945280
+ubuntu,6,16,twitter-2010.txt.bin,social network,11.7GB,41652230,1468364884,PageRank_20,0.103,49664,-,160%,,
+ubutnu,6,16,twitter-2010.txt.bin,social network,11.7GB,41652230,1468364884,PageRank_50,0.125,54580,-,226%,,
+ubutnu,6,16,twitter-2010.txt.bin,social network,11.7GB,41652230,1468364884,PageRank_10,0.1,46432,-,194%,,
+ubutnu,6,16,twitter-2010.txt.bin,social network,11.7GB,41652230,1468364884,Connected_Commponent,19.97,11669032,,97%,,
+ubutnu,6,8,twitter-2010.txt,social network,26.1GB,41652230,1468364884,transform_txt_bin,,,,,,
+ubutnu,6,8,twitter-2010.txt.bin,social network,11.7GB,41652230,1468364884,PageRank_20,0.105,47188,,208%,,
+ubutnu,6,8,twitter-2010.txt.bin,social network,11.7GB,41652230,41652230,PageRank_50,0.123,54396,,236%,,
 ubutnu,4,8,twitter-2010.txt.bin,social network,11.7GB,41652230,41652230,PageRank_10,0.101,45908,,171%,,
 ubutnu,4,8,twitter-2010.txt.bin,social network,11.7GB,41652230,41652230,Connected_Commponent,28.522,11265376,,88%,,
 ubutnu,4,8,web-Google.txt,web,72M,875713,5105039,transform_txt_bin,1.227,1654372,,143%,149200,79832
