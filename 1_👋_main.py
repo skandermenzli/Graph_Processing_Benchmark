@@ -46,20 +46,43 @@ st.markdown("""
   
 </ul>
 """, unsafe_allow_html=True)
-
+# test = pd.read_csv('./csv/PFA-ligra.csv')
+# print(test)
 app = Flask(__name__)
 @app.route("/predict",methods=['POST'])
 def hello_world():
+    print('aaaaaaaaaa')
+    print(request.json)
+    print(request.json['cpu'])
+    print(request.json['ram'])
+    print(request.json['graph_size'])
+    print(request.json['graph_nodes'])
+    print(request.json['graph_edges'])
+    print(request.json['algo'])
+    print(request.json['iterations'])
     test_data = pd.DataFrame({
         # 'OS':[os_name],
         # 'disk': [disk_gb],
-        'cpu': [float(request.form['cpu'])],
-        'ram': [float(request.form['ram'])],
-        'Graph_size(MB)': [float(request.form['graph_size'])],
-        'Graph_nodes(vertices)': [int(request.form['graph_nodes'])],
-        'Graph_edges': [int(request.form['graph_edges'])]
+        'cpu': [float(request.json['cpu'])],
+        'ram': [float(request.json['ram'])],
+        'Graph_size(MB)': [float(request.json['graph_size'])],
+        'Graph_nodes(vertices)': [int(request.json['graph_nodes'])],
+        'Graph_edges': [int(request.json['graph_edges'])]
     })
-    algo = request.form['algo']
+    print(test_data)
+    algo = request.json['algo']
+    iter = request.json['iterations']
+    print("algo *****************"+algo)
+    if(algo=="PAGE_RANK"):
+        print(algo)
+        print(iter)
+        algo="PR"+str(iter)
+        print(algo)
+    elif(algo=="CONNECTED_COMPONENTS"):
+        algo="CC"
+    else: 
+        algo = request.json['algo']
+    print(algo)
     machines = pd.read_csv("csv/machines.csv")
     graphs = pd.read_csv("csv/graphs.csv")
    # print("flassssssssssssk:", flask.__version__)
