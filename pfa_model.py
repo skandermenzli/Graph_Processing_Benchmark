@@ -1,3 +1,4 @@
+import os
 import sklearn
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
@@ -59,10 +60,13 @@ class PfaModel:
         print("indice", indices)
         print(self.res.iloc[[indices[0, 0]]])
         config = self.res.iloc[[indices[0, 0]]]
+        
+        my_path = os.path.abspath(os.path.dirname(__file__))
 
-        graphchi = pd.read_csv('csv/PFA-GraphChi.csv')
-        mmap = pd.read_csv('csv/PFA-MMAP.csv')
-        ligra = pd.read_csv('csv/PFA-ligra.csv')
+        graphchi = pd.read_csv(os.path.join(my_path,'csv/PFA-GraphChi.csv'))
+        mmap = pd.read_csv(os.path.join(my_path,'csv/PFA-MMAP.csv'))
+        
+        ligra = pd.read_csv(os.path.join(my_path, "./csv/PFA-Ligra.csv"))
         tools = [mmap, graphchi, ligra]
         names = ['mmap', 'graphchi', 'ligra']
         scores = list()
