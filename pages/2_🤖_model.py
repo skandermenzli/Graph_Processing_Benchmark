@@ -4,7 +4,8 @@ import streamlit as st
 
 st.title('Benchmark Model')
 
-st.markdown("<span style='font-size:20px; font-weight:bold'>Enter our corresponding configurations</span>", unsafe_allow_html=True)
+st.markdown("<span style='font-size:20px; font-weight:bold'>Enter your corresponding Graph and machine configurations and our model will select the appropiate framework for your case"
+            "</span>", unsafe_allow_html=True)
 
 
 machines = pd.read_csv("csv/machines.csv")
