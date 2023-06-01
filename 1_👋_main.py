@@ -80,8 +80,12 @@ def hello_world():
         print(algo)
     elif(algo=="CONNECTED_COMPONENTS"):
         algo="CC"
-    else: 
-        algo = request.json['algo']
+
+    elif(algo=="TRIANGLE_COUNTING"):
+        algo="TC"
+        print(algo)
+
+
     print(algo)
     machines = pd.read_csv("csv/machines.csv")
     graphs = pd.read_csv("csv/graphs.csv")

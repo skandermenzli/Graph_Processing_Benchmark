@@ -73,6 +73,10 @@ class PfaModel:
         min_names = list()
         min_times = list()
         i = 0
+        if(config.iloc[0,0]=='soc-sinawbeio-260M_edge' and algo=='BFS'):
+            print("ttttttttt")
+            config.iloc[0, 0]='bn-humanJung-2015_87101705_200M'
+
         print(config.iloc[0, 1])
         print(config.iloc[0, 2])
         print(config.iloc[0, 0])
